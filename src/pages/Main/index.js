@@ -63,7 +63,7 @@ export default class Main extends Component {
     };
 
     this.setState({
-      users: [...users, data],
+      users: [...users, data].sort((a, b) => a.name > b.name),
       newUser: '',
       loading: false,
     });
